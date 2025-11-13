@@ -1,0 +1,14 @@
+:root {
+  /* Accent color (light mode) */
+  --sl-color-accent: #8b5cf6; /* your preferred color */
+  --sl-color-accent-high: #a78bfa;
+  --sl-color-accent-low: #f3e8ff;
+
+  /* Optional dark mode tweaks */
+  [data-theme="dark"] {
+    --sl-color-accent: #761597;
+    --sl-color-accent-high: #8E13A1;
+    --sl-color-accent-low: #6B09B4;
+  }
+}
+

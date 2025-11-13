@@ -1,40 +1,70 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: NoteVC
+description: Block-level version control for Markdown notes.
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: Track every change, block by block. Version control designed for the way you think.
   image:
-    file: ../../assets/houston.webp
+    file: ../../../public/hero.svg
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Get Started
+      link: /getting-started/introduction
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+      variant: primary
+    - text: View on GitHub
+      link: https://github.com/darwincereska/notevc
+      icon: github
+      variant: secondary
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+## Why Block-Level?
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+Traditional version control tracks entire files. But your notes aren't monolithic—they're collections of ideas, tasks, and thoughts. NoteVC understands this.
+
+<CardGrid>
+  <Card title="Granular History" icon="document">
+    Track changes to individual headings, paragraphs, and lists. See exactly what changed, when, and why.
+  </Card>
+  <Card title="Smart Merging" icon="puzzle">
+    Edit different sections simultaneously without conflicts. NoteVC merges changes intelligently at the block level.
+  </Card>
+  <Card title="Markdown-Native" icon="pencil">
+    Built specifically for Markdown. No adapters, no compromises. Just pure, block-aware version control.
+  </Card>
+  <Card title="Time Travel" icon="rocket">
+    Restore individual blocks from any point in history. Keep your document structure while recovering lost content.
+  </Card>
 </CardGrid>
+
+## Perfect For
+
+- **Personal Knowledge Management** — Track the evolution of your notes and ideas
+- **Documentation Teams** — Collaborate on docs without stepping on each other's toes
+- **Content Writers** — Version your articles section by section
+- **Researchers** — Maintain detailed histories of your research notes
+
+## See It In Action
+
+```markdown
+## My Research Notes
+
+### Literature Review
+<!-- This block has its own version history -->
+Key findings from Smith et al. (2024)...
+
+### Methodology  
+<!-- This block was edited separately -->
+We employed a mixed-methods approach...
+
+### Results
+<!-- This block is brand new in v3.2 -->
+Initial data shows promising trends...
+```
+
+Each section maintains its own history. Change one, leave the others untouched. Merge updates without conflicts. It's version control that works the way you think.
+
+---
+
+Ready to version your notes the right way? [Get started →](/getting-started/introduction)

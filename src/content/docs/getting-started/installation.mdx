@@ -1,0 +1,91 @@
+---
+title: "Installation"
+---
+import { Tabs, TabItem } from "@astrojs/starlight/components"
+
+
+## Package Manager
+
+To install **NoteVC** via a package manager use the commands below:
+
+<Tabs>
+<TabItem label="Homebrew">
+   ```bash
+    brew install darwincereska/software/notevc
+   ``` 
+</TabItem>
+<TabItem label="Arch Linux">
+   ```bash
+    yay -S notevc
+    ``` 
+</TabItem>
+<TabItem label="Ubuntu">
+   ```bash
+    sudo apt install notevc
+   ``` 
+</TabItem>
+<TabItem label="Fedora">
+   ```bash
+    sudo dnf install notevc
+   ``` 
+</TabItem>
+</Tabs>
+
+
+## Manual Installation
+
+### From Release
+
+:::note
+Currently the only precompiled binaries are:
+- MacOS ARM64
+- Linux x64
+
+Any other architechtures need to follow: [Compiling from source](#from-source)
+:::
+
+Download the binary from the latest release:
+<Tabs>
+<TabItem label="MacOS">
+```bash
+wget -O notevc-macos-arm64 $(wget -qO- https://api.github.com/repos/darwincereska/notevc/releases/latest | grep "browser_download_url.*notevc-macos-arm64" | cut -d '"' -f 4)
+```
+</TabItem>
+<TabItem label="Linux">
+    ```bash
+    wget -O notevc-linux-x64 $(wget -qO- https://api.github.com/repos/darwincereska/notevc/releases/latest | grep "browser_download_url.*notevc-macos-arm64" | cut -d '"' -f 4)
+    ```
+</TabItem>
+</Tabs>
+
+### From Source
+
+Below is the instructions on compiling from source
+
+:::caution[Requirements]
+To build **NoteVC** from source you need the following dependencies:
+- [Gradle](https://gradle.org)
+- [Java 21+](https://java.com)
+- [GraalVM](https://graalvm.org)
+- [Kotlin 2.2+](https://kotlinlang.org)
+- Git
+:::
+
+1. Clone the repository:
+```bash title="GitHub repository"
+git clone https://github.com/darwincereska/notevc && cd notevc
+```
+
+2. Build the `.jar` file
+```bash title="Gradle build command"
+gradle build
+```
+
+3. Compile the binary
+```bash
+gradle nativeCompile
+```
+
+:::note
+The binary will be located in: **`build/native/nativeCompile/notevc`**
+:::
